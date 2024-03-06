@@ -1,0 +1,242 @@
+* {
+  /*box-sizing: border-box;*/
+  width: auto;
+  height: auto;
+  /*background-color: violet;*/
+}
+body {
+  line-height: 1.4;
+  word-spacing: 1.4px;
+  font-family: "Roboto", sans-serif;
+}
+.header {
+  /*images de fond du header*/
+  height: 100;
+  width: 100%;
+  background-image: url("../images/the-binding-of-isaac/jpeg/isaac.jpeg"),
+    url("../images/the-binding-of-isaac/jpeg/detroitfansite1.jpeg"),
+    url("../images/the-binding-of-isaac/jpeg/doctor-whofansite1.jpeg");
+  background-repeat: no-repeat; /* Pour éviter la répétition des images */
+  background-position: left, center, right; /* Position de chaque image */
+  background-size: contain cover;
+}
+#paragraphe {
+  margin-left: 200px; /* Marge */
+  margin-right: 200px;
+}
+.sommaire {
+  background-color: indianred;
+}
+.header h2.fansite1 a {
+  display: block; /* Affiche les liens en block */
+}
+.header h2.fansite1 {
+  font-size: 24px; /* Taille de base pour les h2 */
+}
+
+.containerfansite1 {
+  justify-content: space-around;
+  display: flex;
+  flex-flow: row;
+  /*background-color: greenyellow;*/
+  align-items: flex-end;
+}
+.containerfan1 h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: medium;
+}
+
+.containerfan1 /*main*/ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightskyblue;
+  padding: 20px; /* Ajoute une marge intérieure pour l'espace entre le contenu et les bords */
+}
+
+.containerfan1 h1 {
+  font-size: 2em; /* Taille de la police relative */
+}
+
+.containerfan1 img {
+  max-width: 30%; /* Ajuste la largeur maximale de l'image pour qu'elle ne dépasse pas la largeur du conteneur */
+  max-height: 15%;
+}
+
+.image-container1 {
+  position: relative; /* Définir la position relative */
+  display: flex;
+  justify-content: space-between; /* Pour placer les images à gauche et à droite */
+  margin-bottom: 10px; /* Ajouter un espacement en bas */
+}
+
+.image-container1 h1 {
+  position: absolute; /* Définir la position absolue */
+  top: 50%; /* Positionner le titre au milieu verticalement */
+  left: 50%; /* Positionner le titre au milieu horizontalement */
+  transform: translate(-50%, -50%); /* Centrer le titre */
+}
+
+.fansite1 {
+  width: 200px;
+  height: 140px;
+  padding: 1em;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 15px;
+  background-color: aqua;
+}
+
+.containerfansite1link {
+  display: flex;
+  flex-direction: row;
+  background-color: blueviolet;
+  justify-content: center;
+  padding: 20px;
+}
+.containerfansite1link {
+  display: flex;
+  justify-content: space-around;
+}
+
+.containerfansite1link ul {
+  display: flex;
+  list-style-type: none; /* Pour enlever les puces de la liste */
+  padding: 0; /* Supprimer le padding par défaut */
+}
+
+.containerfansite1link ul li {
+  margin-right: 20px; /* Pour ajouter un espacement entre les éléments de la liste */
+}
+
+.containerfansite1link h3 {
+  margin-right: 20px; /* Pour ajouter un espacement entre le titre et la liste */
+}
+.containerfansite1link ul {
+  width: 50%;
+}
+
+.containerfansite1link a {
+  background-color: azure;
+  flex-direction: reverse;
+  justify-content: center;
+  align-items: flex-end;
+  border: 1px solid #999;
+  margin: 5px; /* Ajoute de l'espace entre chaque lien */
+  height: 5px;
+  display: flex;
+  border-radius: 10px;
+  padding: 20px;
+  text-decoration: underline; /*soulignement des liens */
+  color: black;
+}
+.preview {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.preview a {
+  display: block;
+  text-decoration: none;
+}
+
+.preview img {
+  max-width: 100%;
+  height: auto;
+  padding: auto;
+}
+
+.image-containerfan2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.image-containerfan2 img {
+  padding: auto; /* Ajoute une marge intérieure pour l'espace entre le contenu et les bords */
+  border-style: groove;
+  border-width: 10px 10px 10px 10px;
+}
+#evenement iframe {
+  padding: auto; /* Ajoute une marge intérieure pour l'espace entre le contenu et les bords */
+  border-style: groove;
+  border-width: 10px 10px 10px 10px;
+}
+#evenement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-style: italic;
+  color: blue;
+  font-size: 20px;
+}
+
+#evenement iframe {
+  max-width: 100%; /* Pour éviter que la vidéo dépasse la largeur du conteneur */
+}
+
+#wiki {
+  text-align: center; /* Pour centrer le contenu horizontalement */
+}
+
+#wiki h6 {
+  margin-bottom: 10px; /* Ajoute une marge en bas pour l'espacement */
+}
+
+#wiki img {
+  max-width: 100%; /* Ajuste la largeur maximale de l'image */
+  height: auto; /* Garde le rapport hauteur-largeur */
+  margin: auto; /* Pour centrer l'image horizontalement */
+}
+/* Media query pour les écrans de taille inférieure à 2560x2523 */
+@media screen and (max-width: 2500px) and (max-height: 2500px) {
+  /* Ajustement de la taille du header */
+  h1 {
+    font-size: 90%;
+    height: 5%;
+    position: sticky;
+  }
+  .header {
+    height: 20%; /* ajuste la hauteur */
+    width: 100%;
+    background-image: url("../images/the-binding-of-isaac/jpeg/isaac.jpeg"),
+      url("../images/the-binding-of-isaac/jpeg/detroitfansite1.jpeg"),
+      url("../images/the-binding-of-isaac/jpeg/doctor-whofansite1.jpeg");
+    background-repeat: no-repeat;
+    background-position: left, center, right;
+    background-size: cover contain;
+  }
+  .header h2.fansite1 {
+    font-size: 20px; /* Ajustement de la taille pour les écrans plus petits */
+  }
+
+  /* Ajustement de la taille du main */
+  main {
+    padding: 10px; /*ajuster le padding */
+  }
+
+  /* Ajustement de la taille du footer */
+  .containerfansite1link {
+    padding: 10px; /*ajuster le padding */
+  }
+
+  /* Ajustement de la taille de la police */
+  body {
+    font-size: 14px; /* ajuster la taille de la police */
+  }
+}
+.containerfansite1link img {
+  width: 30px; /* Définir une largeur fixe pour toutes les images */
+  height: 30px; /* Permettre à la hauteur de s'ajuster automatiquement pour maintenir les proportions */
+  margin-right: 10px; /* Ajouter une marge à droite des images pour l'espacement */
+}
+.containerfansite1link .twitter-logo {
+  margin-left: auto; /* Cela pousse l'image à l'extrême droite */
+  float: right;
+}

@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-size: 1em;
+  scroll-behavior: smooth;
+  scroll-margin-top: 75px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --primary-color-alpha: 100%;
+  --primary-color: hsla(213, 50%, 17%, var(--primary-color-alpha));
+
+  --secondary-color-alpha: 100%;
+  --secondary-color: hsla(213, 50%, 27%, var(--secondary-color-alpha));
+
+  --tertiary-color-alpha: 100%;
+  --tertiary-color: hsla(213, 50%, 37%, var(--tertiary-color-alpha));
+
+  --text-color-alpha: 100%;
+  --text-color: hsla(0, 0%, 100%, var(--text-color-alpha));
+
+  --page-section-padding: 39.8px;
+}
+
+body {
+  color: var(--text-color);
+}
+
+header,
+footer {
+  background-color: var(--primary-color);
+}
+
+/* La barre de navigation */
+.navbar {
+  --primary-color-alpha: 50%;
+  --primary-color: hsla(213, 50%, 17%, var(--primary-color-alpha));
+  background-color: var(--primary-color);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  text-transform: uppercase;
+  z-index: 999;
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  margin: auto;
+  list-style-type: none;
+}
+
+.navbar-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.navbar-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.1em;
+  padding-inline: 50px;
+  text-decoration: none;
+  color: currentColor;
+  transition: 100ms ease;
+}
+
+.navbar-item a:hover,
+.navbar-item a:focus {
+  background-color: var(--secondary-color);
+}
+
+.navbar-item a:active {
+  background-color: var(--tertiary-color);
+}
+
+.navbar-item a.btn-top {
+  padding-inline: 25px;
+}
+
+.navbar-item a.btn-top img {
+  width: 50px;
+}
+
+/* Tous ce qui est commun aux sections */
+.page-section {
+  padding: var(--page-section-padding);
+}
+
+main .page-section:nth-child(odd) {
+  background-color: var(--tertiary-color);
+}
+
+main .page-section:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+
+.section-container {
+  width: 50%;
+  margin: auto;
+}
+
+.section-container-big {
+  width: 75%;
+  margin: auto;
+}
+
+.section-content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+}
+
+.section-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.section-title {
+  padding-block-end: var(--page-section-padding);
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Style du héro */
+.section-hero {
+  text-align: center;
+  position: relative;
+  height: 100svh;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 65%;
+  line-height: 1.5em;
+}
+
+.hero-title-small {
+  font-size: 0.75em;
+}
+
+/* Style de la liste d'actualités */
+.news-container {
+  display: grid;
+  gap: 15px;
+}
+
+.news {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--tertiary-color);
+  border-radius: 5px;
+}
+
+.news img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+.news-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.news-content a {
+  color: var(--text-color);
+}
+
+/* Style de la galerie d'image */
+.image-gallery {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+}
+
+.image-figure {
+  text-align: center;
+  box-shadow: 0px 0px 8px 2px hsla(0, 0%, 0%, 50%);
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.image-figure img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  transition: 250ms ease;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-figure:hover img {
+  transform: scale(1.25);
+}
+
+.article-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+  margin-block: 25px;
+}
+
+.text-bold,
+.text-bold-colored {
+  font-weight: bold;
+}
+
+.text-bold-colored {
+  color: hsla(213, 50%, 75%, 100%);
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-question {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Style de la galerie de plateformes */
+.platforms-gallery {
+  grid-template-columns: repeat(2, 100px);
+  gap: 50px;
+}
+
+.platforms-gallery a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.platforms-gallery a figure {
+  border-radius: 5px;
+}
+
+.platforms-gallery a figure img {
+  width: 100px;
+  height: 100px;
+}
+
+.platforms-gallery a figure figcaption {
+  text-align: center;
+  padding-block-end: 12px;
+}
+
+/* Style du footer */
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-block-end: var(--page-section-padding);
+  border-bottom: 2px solid var(--tertiary-color);
+}
+
+.contact-form input[type='text'],
+.contact-form textarea {
+  font-size: 1.1em;
+  padding: 10px;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form input[type='submit'] {
+  align-self: flex-end;
+  padding-block: 10px;
+  padding-inline: 15px;
+}
+
+.socials-media {
+  padding-block-start: 75px;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  justify-content: center;
+  gap: 50px;
+}
+
+.socials-media a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.socials-media a figure {
+  border-radius: 5px;
+}
+
+.socials-media a figure img {
+  width: 100px;
+  height: 100px;
+}
+
+.socials-media a figure figcaption {
+  text-align: center;
+  padding-block-end: 12px;
+}
+
+/* Style de page d'écran de très petite taille (téléphone portable de maximum 600px) */
+@media only screen and (max-width: 600px) {
+  *,
+  *::before,
+  *::after {
+    scroll-margin-top: 0;
+  }
+
+  .navbar {
+    --primary-color-alpha: 100%;
+    --primary-color: hsla(213, 50%, 17%, var(--primary-color-alpha));
+    height: auto;
+    position: relative;
+    background-color: var(--primary-color);
+  }
+
+  .navbar-items {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-item {
+    width: 100%;
+  }
+
+  .navbar-item a {
+    padding-block: 25px;
+  }
+
+  .section-container {
+    width: 90%;
+  }
+
+  .image-gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Style de page d'écran de petite taille (tablette en mode portrait et téléphone portable large de minimum 600px) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  *,
+  *::before,
+  *::after {
+    scroll-margin-top: 0;
+  }
+
+  .navbar {
+    --primary-color-alpha: 100%;
+    --primary-color: hsla(213, 50%, 17%, var(--primary-color-alpha));
+    height: auto;
+    position: relative;
+    background-color: var(--primary-color);
+  }
+
+  .navbar-items {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-item {
+    width: 100%;
+  }
+
+  .navbar-item a {
+    padding-block: 25px;
+  }
+
+  .section-container {
+    width: 85%;
+  }
+
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Style de page d'écran de moyenne taille (tablette en mode paysage de minimum 768px) */
+@media only screen and (min-width: 768px) {
+  .section-container {
+    width: 75%;
+  }
+
+  .image-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Style de page d'écran de grande taille (écran de bureau et de pc portable de minimum 992px) */
+@media only screen and (min-width: 992px) {
+  .section-container {
+    width: 65%;
+  }
+
+  .image-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Style de page d'écran de très grande taille (très grand écran de bureau et de pc portable de minimum 1200px) */
+@media only screen and (min-width: 1200px) {
+  .section-container {
+    width: 50%;
+  }
+
+  .image-gallery {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

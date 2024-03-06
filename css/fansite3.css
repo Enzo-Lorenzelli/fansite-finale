@@ -1,0 +1,652 @@
+                                                /* --- BODY / MAIN --- */
+                        /* -- cette première partie regroupe les éléments stylisée en commun --*/
+body {
+    background-image: url(../images/doctor-who/jpg/fondétoilé.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0;
+}
+
+main{
+    padding-top: 50px;
+}
+
+.titres h1{
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 2px 2px 2px #999999;
+    margin-top: 0;
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+                                                /* --- HEADER --- */
+/* grandd beandeau hero  */
+.bandeau{
+    object-fit: cover; /*permet d'adapter l'image a boite, sans perdre le ratio*/
+    box-shadow: 5px 5px 10px;
+    width: 100%;
+}
+
+                                /* -- BARRE DE NAVIGATION  ET FOOTER --*/
+.navigation{
+    position:fixed;
+    z-index: +1;
+}
+
+/* --- NAVIGATION DANS LA PAGE --- */
+#navpage{
+    background: #999999;
+    box-shadow: 2px 2px 10px;
+    font-family: 'Roboto Slab',serif;
+    display: flex;
+    justify-content:center;
+    font-size: 25px;
+    gap: 70px;
+    position: fixed;
+    width: 100%;
+}
+
+#navpage a{
+    text-decoration-line: none;
+    color: black;
+    padding: 20px;
+}
+
+#navpage a:hover {
+    color: black;
+    background-color: rgb(202, 202, 202);
+    box-shadow: 2px 2px 10px;
+}
+
+/* --- MENU HAMBURGER : NAVIGATION DANS LE SITE FANSITE -- */
+.menu{
+    position: fixed;
+    width: 0;
+}
+
+#hamburger{
+    display: none;
+}
+
+#hamburger-logo{
+    cursor: pointer;
+    background:white;
+    display: block;
+    color: black;
+    text-align: right;
+    font-size: 25px;
+    font-family: 'Roboto Slab',
+        serif;
+    background-color: #999999;
+    margin-left: 50px;
+    padding-top: 7px;
+}
+
+#navhome{
+    display: flex;
+    flex-direction: column;
+    background: #0532fc;
+    overflow: hidden;
+    width: 200px;
+    transform: translateX(-210px);
+    text-decoration: none;
+}
+
+#navhome a{
+    text-decoration-line: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 5px 15px 25px; /* 1=haut, 2=droite, 3=bas, 4=gauche*/
+    font-family: 'Roboto Slab', serif;
+}
+
+/* - pour l'animation du menu hamburger - */
+#hamburger-logo,
+#navhome{
+    transition: 0.7s;
+}
+
+#hamburger:checked ~ #navhome{
+    transform: translate(0);
+    box-shadow: 2px 2px 5px;
+}
+
+#hamburger-logo:hover,
+#navhome a:hover {
+    color: black;
+    background-color: rgb(202, 202, 202);
+    box-shadow: 1px 1px 5px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #999999;
+    box-shadow: 2px 2px 10px;
+    font-family: 'Roboto Slab',
+        serif;
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+footer a {
+    text-decoration-line: none;
+    color: black;
+    padding: 20px;
+
+}footer a:hover {
+    color: black;
+    background-color: rgb(202, 202, 202);
+    box-shadow: 2px 2px 10px;
+}
+
+                                                /* --- PRESENTATION DE JEU / HSITOIRE ET PERSONNAGES---*/ 
+                                                                /* -- PRESENTATION DU JEU -- */  
+/* div dans laquelle on flex l'ensemble des éléments (image + résumé) */
+.presentation{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: -40px;
+    margin-bottom: -3px;
+}
+
+/* image avec les notes données par la presse*/
+.image{
+    object-fit: cover;
+}
+
+.picture {
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 2px 5px;
+}
+
+.résumé{
+    width: auto;
+    margin-bottom: 0;
+    background-color: rgba(245, 245, 245, 0.553);
+    z-index: -1;
+}
+
+.résumé p{
+    color: rgb(253, 253, 253);
+    font-family: 'Roboto Slab',serif;
+    font-size: 25px;
+    text-align: center;
+    margin-left: 50px;
+}
+
+                                                /* -- HISTOIRE ET PERSONNAGES --*/
+
+/* div dans laquelle on flex l'ensemble des éléments */
+.histoire{
+    background-image: url(../images/doctor-who/jpg/fondtardis2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+}
+
+/*blac dans lequel il y a la résumé de l'histoire du jeu*/
+.blocH{
+    display: flex;
+    flex-direction: column;
+}
+
+.histoire p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: -15px;
+    text-align: center;
+    font-size: 25px;
+    align-self: center;
+    font-weight: 700;
+    text-shadow: 5px 5px 5px rgb(255, 255, 255);
+}
+
+/*boite parents dans laquelle il ya toutes les images */
+.boiteperso{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    gap:20px;   
+}
+
+/*petite vignette des personnage*/
+.perso {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 250ms ease-in-out;
+}
+
+.imageperso{
+    width: 200px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+    position:relative;
+    box-shadow: 2px 2px 5px;
+}
+
+.imageperso p{
+    width: 100%;
+    height: fit-content;
+    margin: 0px;
+    position: absolute;
+    bottom:0;
+    background-color: rgba(146, 146, 146, 0.362);
+    transform: translateY(100%);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* suite d'effet hover sur l'ensemble des vignettes personnages*/
+.imageperso:hover p{
+    transform: translateY(0%);
+}
+
+.imageperso:hover .perso{
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform:scale(0.1s);
+    filter: sepia(100%);
+}
+
+.imageperso:hover::after{
+    height: 0;
+}
+
+.imageperso:nth-child()::after {
+    background-image: url(../images/doctor-who/jpg/osgood.jpg);
+}
+
+                                                /* --- CRITIQUE JEU --- */
+.critiquejeu{
+    background-image: url(../images/doctor-who/jpg/fondvortex.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+    margin: auto;
+}
+
+/* boite parents dans laquelle on flex tous les éléments*/
+.portes{
+    background-color: rgb(0, 26, 120);
+    box-shadow: 0px 0px 25px 20px rgb(0, 26, 120);; 
+    /* = le premier = va vers la droite, le deuxieme = va vers le bas, le troisième = diffusion, le quatrième = intensité */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap:20px;
+}
+
+.portes h2 {
+    text-align: center;
+    font-family: 'Roboto Slab',
+        serif;
+    font-size: 20px;
+}
+
+.portes p {
+    width: 100%;
+    height: auto;
+    font-size: 17px;
+    text-align: center;
+    font-family: 'Roboto Slab',
+        serif;
+}
+
+/*uniquement les endroits ou il ya du texte avec les différents parametres du jeu*/
+/*attention, ce parametre est également utiliser pour la section suivante*/
+article {
+    background-color: rgb(215, 215, 215);
+    border: black solid 3px;
+    box-shadow: 2px 2px 5px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+}
+
+.bloc1,.bloc2,.bloc3,.bloc4,.bloc5,.bloc6,.bloc7,.bloc8,.bloc9,.bloc10,.bloc11,.bloc12{
+    width: 200px;
+    height: 400px;
+    border: black solid 5px;
+    gap: 20px;
+}
+
+.bloc7 {
+    background-image: url(../images/doctor-who/jpg/1.jpg); 
+    background-size: cover; 
+    background-repeat: no-repeat}
+.bloc2 {
+    background-image: url(../images/doctor-who/jpg/2.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat}
+.bloc9 {
+    background-image: url(../images/doctor-who/jpg/3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat}
+.bloc10 {
+    background-image: url(../images/doctor-who/jpg/4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat}
+.bloc5 {
+    background-image: url(../images/doctor-who/jpg/5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat}
+.bloc12 {
+    background-image: url(../images/doctor-who/jpg/6.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat}
+
+.bloc2:hover,
+.bloc5:hover,
+.bloc7:hover,
+.bloc9:hover,
+.bloc10:hover,
+.bloc12:hover{
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(0.1s);
+}
+
+                                                /* --- ACTUALITES DANS LE WHONIVERS --- */
+/*disposition des différents bloc dans lesquels il y a les actualités et la sylisation*/
+.actu{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 3px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.actu h2 {
+    font-size: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: 'Roboto Slab',
+        serif;
+    color: red;
+    background-color: rgba(255, 255, 255, 0.58);
+    margin: 25px;
+    border-radius: 20px;
+}
+
+.actu time {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.actu a{
+    text-decoration: none;
+    color:blue;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.actu p {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: justify;
+}
+
+.art1,
+.art2,
+.art3,
+.art4,
+.art5,
+.art6 {
+    height: 450px;
+    width: 450px;
+    transition: .3s;;
+}
+
+hr {
+    border-color: red;
+    text-align: center;
+}
+
+/* partie sur la booite de l'article 6*/
+.art6 {
+    background-image: url(../images/doctor-who/jpg/dontblink.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.art6 p {
+    font-size: 30px;
+    font-family: 'Roboto Slab',
+     serif;
+    text-align: center;
+    color: white;
+    padding-top: 80%;
+}
+
+.art6 p:hover{
+    color: black;
+    background-color: rgba(186, 186, 186, 0.362);
+    box-shadow: 2px 2px 10px;
+}
+
+/* partie sur la boite de l'article 1 avec les images carroussel*/
+.art1 {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden; /*cahche juste la barre de scroll avec le hidden, l'auto est toujours activé*/
+}
+
+.imgactu1,
+.imgactu2{
+    object-fit: contain;
+    width: 450px;
+    height: 450px;
+    margin-top: 10px;
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-direction:alternate;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;   
+}
+
+@keyframes slide{
+    0% {
+        transform: translateX(0px);
+    }
+
+    25%{
+        transform: translateX(0);
+        }
+
+    50%{
+        transform: translateX(-450px);
+        }
+
+    100% {
+        transform: translateX(-450px);
+    }
+}
+
+/* effet hover, quand on passe la souris sur une case, les autres s'assombrissent*/
+.actu:hover .art1:not(:hover) {
+    filter: brightness(0.5);
+}
+
+.actu:hover .art2:not(:hover) {
+    filter: brightness(0.5);
+}
+
+.actu:hover .art3:not(:hover) {
+    filter: brightness(0.5);
+}
+
+.actu:hover .art4:not(:hover) {
+    filter: brightness(0.5);
+}
+
+.actu:hover .art5:not(:hover) {
+    filter: brightness(0.5);
+}
+
+.actu:hover .art6:not(:hover) {
+    filter: brightness(0.5);
+}
+
+                                                 /* ------ POUR ALLER PLUS LOIN ------ */
+
+/* boite parents dans laquelle je peux flex tous les éléments*/
+.pourallerplusloin{
+    display: flex;
+    flex-direction: column;
+}
+
+                        /* -- SUR QUELLE PLATEFORME JOUER -- */
+.boxpapl {
+    background-color: rgba(211, 208, 183, 0.505);
+    box-shadow: 2px 2px 5px 10px rgb(211, 208, 183, 0.505);
+    border-radius: 20px;
+    display:flex;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.boxpapl h3{
+    font-size: 30px;
+    font-family: 'Roboto Slab',
+        serif;
+    text-align: center;
+}
+
+.logo{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin:40px;
+}
+
+                        /* --- FORMULAIRE DE CONTACT --- */
+.contacter{
+    background-color: #999999;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 2px 2px 5px;
+    margin: 200px;
+}
+
+.contacter h3{
+    font-family: 'Roboto Slab',
+        serif;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.contacter p{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+form div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+form div > label{
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+form div > input, form div > select, form div > textarea{
+    background-color: rgb(255, 255, 255);
+    border:none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow:  2px 2px 5px;
+}
+
+form div > input, form div > select{
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 15px 15px 15px 15px;
+}
+
+/* ces deux paramètre en faisant appel au textarea ont permis de le rendre "responsif"*/
+form div > textarea{
+    width: 80%;
+    height: 250px;
+}
+
+form div > input::placeholder, form > div textarea::placeholder{
+    color: grey;
+}
+
+form div > select:invalid{
+    color:rgb(64, 0, 255);
+}
+
+form div > select option{
+    background-color: aliceblue;
+    color:black;
+}
+
+form div:last-child{
+    align-items: center;
+    margin-top: 20px;
+}
+
+form button{
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 25px;
+    background-color: beige;
+    border: #999999 solid 2px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px;
+    color: #999999;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
